@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/samples/SerialSampleProgram.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/Capture.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/Connection/SerialConnection.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/CaptureFactory.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/RangeSensorInternalInformation.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/Connection/EthernetConnection.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/NE_Capture.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/ND_Capture.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/HE_Capture.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/MD_Capture.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/GE_Capture.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/Connection/Connection.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/samples/EthernetSampleProgram.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/CaptureSettings.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/RangeSensorInformation.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/GD_Capture.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/RangeSensorParameter.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/Connection/ConnectionUtil.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/HD_Capture.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/UrgDevice.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/RangeSensor.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/ME_Capture.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/CaptureData.java</file>
+            <file>file:/C:/Users/kristou/urg_java_lib/src/com/kristou/urgLibJ/RangeSensor/Capture/CaptureHandler.java</file>
+        </group>
+    </open-files>
+</project-private>

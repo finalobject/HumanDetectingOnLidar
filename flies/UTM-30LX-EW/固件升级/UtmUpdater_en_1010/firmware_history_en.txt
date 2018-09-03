@@ -1,0 +1,62 @@
+UTM-30LX (Top-URG) History of Firmware Update       2013-07-16 Hokuyo Automatic Co., Ltd.
+
+2013-07-16 Version 1.20.02
+    * Fixed: Problem of the verification mode
+
+2013-04-23 Version 1.20.01
+    * Fixed: URG sensor does not start owing to the abnormalities in a motor.
+
+2012-12-17 Version 1.19.01
+    * Fixed: Problem of the internal circuit is reset by noise.
+    * Fixed: A line feed character is added inadvertently to the front of the character
+             string reply from the QT command with character string attached.
+
+2010-07-09  Version 1.18.01
+    * Fixed: wrong timestamp due to DMA transmission
+    * Fixed: Generation of error code 46 and 75 even when sensor is in normal operation
+    * Fixed: The first letter of serial number is corrected to 'H'
+
+2010-02-22  Version 1.17.01
+    * Added: the write-protection function is added to FRAM(non-volatile memory)
+
+2010-01-19  Version 1.16.02
+    * Added: RB command added for rebooting.
+    * Added: Improved robustness against disturbance light or another range sensor.
+    * Added: FRAM cannot be written when power supply is less than the required voltage.
+    * Fixed: missing transmission data of MD reply.
+    * Fixed: MD replies continue even afger QT command.
+    * Fixed: VV command information: Communication protocol is changed from 2.1b to 2.0
+    * Fixed: Obtained measurement data is fixed fan type because of multi-echo
+             reflected light from iron bars or mesh.
+
+2009-04-17  Version 1.15.05 (P.1.05) 
+    * Fixed: Wrong check sum calculation of II command.
+    * Fixed: Missing baud rate information in II command.
+    * Fixed: Error in operation mode because of II command.
+    * Fixed: New line code of TM command response is wrong as 'CR'.
+    * Fixed: Data of MD command had shifted about 90-180 degree.
+    * Added: TM command is accepted while MD command action is on going.
+    * Added: New MD command with different scanning range can be accepted
+             while present MD commaned is still in action.
+    * Fixed: Remaining number of scan count is not updating in ME command.
+    * Fixed: Reply from QT and ME is mixing when QT command is send
+             while ME command is still in action.
+    * Added: Robust FRAM(non-volatile memory) protection.
+
+2008-11-04  Version 1.12.00 (M.1.00bt2)
+    * Fixed: URG sensor's connection can not be confirmed by PC when USB cable is
+             pulled out while MD command is still in action.
+    * Fixed: Communication stops when received data size is more than 64 bytes.
+    * Fixed: Laser does not turn off when TM command is received.
+    * Added: Breakdown code.
+
+2008-04-21  Version 1.11.59 (L.1.59)
+    * First release version
+
+NOTES
+    * The data of ME command may not be able to is transmitted at every scan and all steps,
+      because its data size is too large. So it is recommended for users to adjust the range parameters.
+      We found a bug that in some communication environment if there is delay in communication,
+      next scan data is overwritten from halfway.
+      We are trying to fix the above bug by avoiding overwritten and transmitting the proper status
+      conveying than transmission could not be success.

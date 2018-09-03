@@ -1,0 +1,35 @@
+﻿生成启动时间为 2016/8/28 14:05:43。
+     1>项目“I:\projects\LaserRadar_PeopleDetection\flies\urg_library-1.2.0\vs2010\c\urg\urg.vcxproj”在节点 2 上(build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“I:\projects\LaserRadar_PeopleDetection\flies\urg_library-1.2.0\vs2010\cpp\Debug\”。
+       InitializeBuildStatus:
+         正在创建“Debug\urg.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Visual Studio2010\VC\bin\CL.exe /c /I..\..\..\include\c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\..\src\urg_connection.c ..\..\..\src\urg_debug.c ..\..\..\src\urg_ring_buffer.c ..\..\..\src\urg_sensor.c ..\..\..\src\urg_serial.c ..\..\..\src\urg_serial_utils.c ..\..\..\src\urg_tcpclient.c ..\..\..\src\urg_utils.c /wd4996 
+         urg_utils.c
+         urg_tcpclient.c
+         urg_serial_utils.c
+         urg_serial.c
+         urg_sensor.c
+         urg_ring_buffer.c
+         urg_debug.c
+         urg_connection.c
+         正在生成代码...
+       Lib:
+         D:\Visual Studio2010\VC\bin\Lib.exe /OUT:"I:\projects\LaserRadar_PeopleDetection\flies\urg_library-1.2.0\vs2010\cpp\Debug\urg.lib" /NOLOGO Debug\urg_connection.obj
+         Debug\urg_debug.obj
+         Debug\urg_ring_buffer.obj
+         Debug\urg_sensor.obj
+         Debug\urg_serial.obj
+         Debug\urg_serial_utils.obj
+         Debug\urg_tcpclient.obj
+         Debug\urg_utils.obj
+         urg.vcxproj -> I:\projects\LaserRadar_PeopleDetection\flies\urg_library-1.2.0\vs2010\cpp\Debug\urg.lib
+       FinalizeBuildStatus:
+         正在删除文件“Debug\urg.unsuccessfulbuild”。
+         正在对“Debug\urg.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“I:\projects\LaserRadar_PeopleDetection\flies\urg_library-1.2.0\vs2010\c\urg\urg.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.85

@@ -1,0 +1,108 @@
+;--------------------------------------------------------
+;Å@URG-Series_USB_Driver.Inf
+;--------------------------------------------------------
+
+[Version]
+LayoutFile=layout.inf
+Signature="$CHICAGO$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%Hokuyo%
+DriverVer=10/26/2009,1.0.0.4
+
+[DestinationDirs]
+DefaultDestDir=12
+
+[Manufacturer]
+%MfgName%=Models,NTamd64
+
+[Models.NTamd64]
+%USB.PnP%=ComPort, USB\VID_15d1&PID_0000
+
+
+[ClassInstall]
+AddReg=PortsClass.AddReg
+
+[PortsClass.AddReg]
+HKR,,,,%PortsClassName%
+
+[ClassInstall32.NT]
+AddReg=PortsClass.NT.AddReg
+
+[PortsClass.NT.AddReg]
+HKR,,,,%PortsClassName%
+HKR,,Icon,,"-23"
+HKR,,Installer32,,"MsPorts.Dll,PortsClassInstaller"
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Models]
+%USB.PnP%=ComPort, USB\VID_15d1&PID_0000
+
+[ComPort.NT]
+include=mdmcpq.inf
+CopyFiles=ComPort.Copy
+AddReg=ComPort.AddReg, ComPort.NT.AddReg
+
+[ComPort.NT.HW]
+include=mdmcpq.inf
+AddReg=ComPort.NT.HW.AddReg
+
+[ComPort.NT.Services]
+include=mdmcpq.inf
+AddService = usbser, 0x00000002, Serial_Service_Inst,
+Serial_EventLog_Inst
+AddService = Serenum,,Serenum_Service_Inst
+
+[ComPort.NT.HW.AddReg]
+HKR,,"UpperFilters",0x00010000,"serenum"
+
+; -------------- USBSerial Port Driver install sections
+[Serial_Service_Inst]
+DisplayName    = %Serial.SVCDESC%
+ServiceType   = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\usbser.sys
+LoadOrderGroup = Extended base
+
+; -------------- Serenum Driver install section
+[Serenum_Service_Inst]
+DisplayName    = %Serenum.SVCDESC%
+ServiceType   = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\serenum.sys
+LoadOrderGroup = PNP Filter
+
+[Serial_EventLog_Inst]
+AddReg = Serial_EventLog_AddReg
+
+[Serial_EventLog_AddReg]
+HKR,,EventMessageFile,0x00020000,"%%SystemRoot%%\System32\IoLogMsg.dll;%
+%SystemRoot%%\System32\drivers\usbser.sys"
+HKR,,TypesSupported,0x00010001,7
+
+; COM sections
+;----------------------------------------------------------
+[ComPort.Copy]
+usbser.sys,,,0x20
+
+[ComPort.AddReg]
+HKR,,PortSubClass,1,01
+
+[ComPort.NT.Copy]
+CopyFiles=ComPort.Copy
+
+[ComPort.NT.AddReg]
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[Strings]
+MfgName="Hokuyo Automatic Co., Ltd."
+Hokuyo="Hokuyo Automatic Co., Ltd."
+DiskName_Desc="Hokuyo USB Drivers Disk"
+PortsClassName = "Ports (COM & LPT)"
+Serenum.SVCDESC = "Hokuyo Serenum Filter Driver"
+Serial.SVCDESC = "Hokuyo USB Serial Port Driver"
+USB.PnP="URG Series USB Device Driver"
