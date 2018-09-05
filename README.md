@@ -46,12 +46,11 @@ device.startCapture();</pre>
 用的是<a id="06e68a784a023935bb61db7620f959fe-c5f1fa6f864950b044e05f6b6d0899177ab34242" class="js-navigation-open" title="libsvm-3.21" href="https://github.com/finalObject/HumanDetectingOnLidar/tree/master/flies/libsvm-3.21">libsvm-3.21</a>这个库，官网提供了各种语言的支持。这部分内容其实很简单了，就是从每一类数据中提取有用的特征，然后开始学习就好了。
 
 用到的特征如下：
-<ol>
- 	<li style="list-style-type: none">
+
 <ol>
  	<li>数据长度。可以是数据点的数量，或者是数据起点和终点直接的物理距离（可以用距离和角度算出二维坐标，然后计算距离）</li>
  	<li><span style="font-size: 1rem;">曲率。就是把这一类数据，拟合成椭圆，计算曲率。因为人体被激光雷达扫描的部分主要就是躯干，差不多就是一个椭圆。可以用这个来筛选墙面之类曲率过小以及垃圾桶之类曲率过大的物体</span></li>
 </ol>
 </li>
-</ol>
+
 还有别的参数，但是我具体也说不上来了，自己扒扒代码吧。
